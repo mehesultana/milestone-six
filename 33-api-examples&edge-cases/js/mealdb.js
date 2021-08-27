@@ -4,20 +4,31 @@ const searchFood = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     //console.log(searchText);
-
+    //clear data
     searchField.value = '';
-
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
-    //console.log(url);
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => displaySearchReasult(data.meals));
+    if (searchText == '') {
+        // please write something to display
+    } else {
+        //load data
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
+        //console.log(url);
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => displaySearchReasult(data.meals));
+    }
 };
 
 //33-6 Display dynamic search result using bootstrap cards
 const displaySearchReasult = (meals) => {
     //console.log(meals);
     const searchResult = document.getElementById('search-result');
+
+    // searchResult.innerHTML = '';
+    searchResult.textContent = '';
+    if (meals.length == 0) {
+        // show no result found;
+    }
+
     meals.forEach((meal) => {
         // console.log(meal);
         const div = document.createElement('div');
