@@ -17,7 +17,7 @@ if (JSON.stringify(first2) === JSON.stringify(second2)) {
 }
 
 function compareObjects(obj1, obj2) {
-    if (Object.keys(obj).length !== Object.keys(obj2).length) {
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) {
         return false;
     }
     for (const prop in obj1) {
@@ -27,5 +27,6 @@ function compareObjects(obj1, obj2) {
     }
     return true;
 }
+
 const isEqual = compareObjects(first2, second2);
 console.log(isEqual);
