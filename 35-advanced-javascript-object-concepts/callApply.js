@@ -21,11 +21,11 @@ const normalGolam = {
     name: 'Normal Golam',
 };
 
-//call
+//call[comma]
 kibria.treatDey.call(heroBalam, 500, 100, 50);
 kibria.treatDey.call(heroBalam, 300, 50, 30);
 
-//apply
+//apply[array]
 kibria.treatDey.apply(heroBalam, [500, 100, 50]);
 kibria.treatDey.apply(heroBalam, [1000, 200, 100]);
 
