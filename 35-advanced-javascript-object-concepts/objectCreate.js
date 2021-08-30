@@ -1,3 +1,4 @@
+//35-1 Module introduction Different way to Create Object
 // 1. using object literal
 const student = { name: 'Sakib AL Hasaan', job: 'cricketer' };
 // 2. constructor
