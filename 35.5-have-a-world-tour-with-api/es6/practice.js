@@ -38,8 +38,6 @@ const fullInfo = `This is ${user.info.name}. My friend is ${friends[1]} . our fa
 
 console.log(fullInfo);
 
-// expected output: Array [8, 6, 7, 9]
-
 //(3.1) no parameter arrow function . return 89
 
 //(3.2)single parameter arrow function . will divide input by 7
@@ -72,3 +70,11 @@ const doMath3 = (p, q) => {
 };
 const result3 = doMath3(14, 83);
 console.log(result3);
+
+//4. map divide each element by 7
+const numbers = [49, 14, 28, 35, 42, 54, 35, 34, 76];
+const output = numbers.map((number) => number / 7);
+console.log(output);
+// 5. map forEach, filter, find
+
+// 6. declare a object & destructuring a object
