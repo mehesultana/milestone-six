@@ -22,10 +22,6 @@ const displaySearchResult = (teams) => {
     const searchResult = document.getElementById('search-result');
 
     searchResult.textContent = '';
-    if (searchText == '') {
-        //error message
-    } else {
-    }
 
     teams.forEach((team) => {
         //console.log(team);
