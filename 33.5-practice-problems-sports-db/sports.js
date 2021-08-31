@@ -4,8 +4,10 @@ const searchTeam = () => {
     const searchText = searchField.value;
     //console.log(searchText);
 
+    //clear data
     searchField.value = '';
 
+    // load data
     const url = `https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${searchText}`;
 
     //console.log(url);
@@ -18,6 +20,13 @@ const searchTeam = () => {
 const displaySearchResult = (teams) => {
     //console.log(teams);
     const searchResult = document.getElementById('search-result');
+
+    searchResult.textContent = '';
+    if (searchText == '') {
+        //error message
+    } else {
+    }
+
     teams.forEach((team) => {
         //console.log(team);
         const div = document.createElement('div');
