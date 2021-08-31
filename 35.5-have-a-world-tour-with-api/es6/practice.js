@@ -51,4 +51,13 @@ const doMath = (x) => {
 const result = doMath(490);
 console.log(result);
 
-//(3.3)
+//(3.3) arrow function with two parameters
+
+const doMath2 = (a, b) => {
+    const sum = a + b;
+    const divide2 = sum / 2;
+    return divide2;
+};
+
+const result2 = doMath2(100, 234);
+console.log(result2);
