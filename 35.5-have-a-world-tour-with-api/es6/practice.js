@@ -61,3 +61,14 @@ const doMath2 = (a, b) => {
 
 const result2 = doMath2(100, 234);
 console.log(result2);
+
+//(3.3) multi-line arrow function . two parameters
+
+const doMath3 = (p, q) => {
+    const plusP = p + 7;
+    const plusQ = q + 7;
+    const sum = plusP + plusQ;
+    return sum;
+};
+const result3 = doMath3(14, 83);
+console.log(result3);
