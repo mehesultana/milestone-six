@@ -17,3 +17,23 @@ const mySelf = {
 
 const myMoney = mySelf.buyBook(100);
 console.log(myMoney);
+
+// template string. minimum 3 property will be dynamic (nested object property, array second element, another property)
+
+const user = {
+    id: 404,
+    info: {
+        name: 'Kibria',
+        address: {
+            country: 'Bangladesh',
+            city: 'Sylhet',
+        },
+    },
+};
+const friends = ['abul', 'babul', 'kabul', 'sabul'];
+
+const favouritePlace = ['kajir bazar', 'audi'];
+
+const fullInfo = `This is ${user.info.name}. My friend is ${friends[1]} . our favourite place is ${favouritePlace[1]}`;
+
+console.log(fullInfo);
