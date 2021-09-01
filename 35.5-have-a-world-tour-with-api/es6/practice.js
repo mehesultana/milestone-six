@@ -75,6 +75,33 @@ console.log(result3);
 const numbers = [49, 14, 28, 35, 42, 54, 35, 34, 76];
 const output = numbers.map((number) => number / 7);
 console.log(output);
+
 // 5. map forEach, filter, find
+//map forEach
+const products = [
+    { name: 'water bottle', price: 50, color: 'yellow' },
+    { name: 'mobile phone', price: 15000, color: 'black' },
+    { name: 'smart watch', price: 3000, color: 'black' },
+    { name: 'sticky note', price: 30, color: 'pink' },
+    { name: 'water glass', price: 3, color: 'white' },
+];
+products.forEach((product) => console.log(product));
+const productPrices = products.map((product) => product.price);
+console.log(productPrices);
+
+//filter
+const numbers2 = [74, 86, 85, 12, 56, 15, 83, 74, 25, 56];
+const bigNumber = numbers2.filter((number) => number > 70);
+console.log(bigNumber);
+
+//find
+const products2 = [
+    { name: 'phone', price: 20000, color: 'gray' },
+    { name: 'leptop', price: 100000, color: 'black' },
+    { name: 'bottle', price: 10, color: 'white' },
+    { name: 'watch', price: 200, color: 'gray' },
+];
+const grayItem = products2.find((product) => product.color == 'gray');
+console.log(grayItem);
 
 // 6. declare a object & destructuring a object
