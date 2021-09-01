@@ -1,5 +1,5 @@
 //API-(Search cocktail by name) https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
-
+const errorDiv = document.getElementById('error');
 const searchDrink = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -7,14 +7,17 @@ const searchDrink = () => {
 
     //clear data
     searchField.value = '';
+    if (searchText == '') {
+        errorDiv.innerText = 'Search field cannot be empty.';
+    } else {
+        //load data
+        const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`;
 
-    //load data
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`;
-
-    //console.log(url);
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => displaySearchResult(data.drinks));
+        //console.log(url);
+        fetch(url)
+            .then((res) => res.json())
+            .then((data) => displaySearchResult(data.drinks));
+    }
 };
 
 const displaySearchResult = (drinks) => {
