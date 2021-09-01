@@ -105,3 +105,20 @@ const grayItem = products2.find((product) => product.color == 'gray');
 console.log(grayItem);
 
 // 6. declare a object & destructuring a object
+const company = {
+    name: 'Robi',
+    ceo: { id: 57, name: 'mehe' },
+    web: {
+        work: 'website development',
+        employee: 22,
+        framework: 'react',
+        tech: {
+            first: 'html',
+            second: 'css',
+            third: 'js',
+        },
+    },
+};
+const { work } = company.web;
+const { first, third } = company.web.tech;
+console.log(work, first, third);
