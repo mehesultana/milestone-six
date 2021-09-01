@@ -61,7 +61,7 @@ const displayDrinkDetails = (drink) => {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
-    <img src="${drink.strDrinkThumb}" class="card-img-top" alt="..." />
+    <img src="${drink.strDrinkThumb}" class="card-img-top " alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">${drink.strDrink}</h5>
                     <p class="card-text">${drink.strInstructions.slice(0, 150)}</p>
