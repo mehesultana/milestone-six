@@ -4,7 +4,11 @@ const searchDrink = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     //console.log(searchText);
+
+    //clear data
     searchField.value = '';
+
+    //load data
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`;
 
     //console.log(url);
@@ -16,6 +20,9 @@ const searchDrink = () => {
 const displaySearchResult = (drinks) => {
     //console.log(drinks);
     const searchResult = document.getElementById('search-result');
+
+    searchResult.textContent = '';
+
     drinks.forEach((drink) => {
         //console.log(drink);
         const div = document.createElement('div');
