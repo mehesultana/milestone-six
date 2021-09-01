@@ -53,8 +53,11 @@ const loadDrinkDetail = (drinkId) => {
 };
 
 const displayDrinkDetails = (drink) => {
-    console.log(drink);
+    //console.log(drink);
     const drinkDetails = document.getElementById('drink-details');
+
+    drinkDetails.textContent = '';
+
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
