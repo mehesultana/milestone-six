@@ -22,10 +22,10 @@ const displaySearchResult = (drinks) => {
         div.classList.add('col');
         div.innerHTML = `
         <div class="card">
-                    <img src="..." class="card-img-top" alt="..." />
+                    <img src="${drink.strDrinkThumb}" class="card-img-top" alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">${drink.strDrink}</h5>
+                        <p class="card-text">${drink.strInstructions.slice(0, 150)}</p>
                     </div>
                 </div>
         `;
