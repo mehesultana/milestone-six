@@ -16,13 +16,22 @@
             <button onclick="searchDrink()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
         </div>
 
-        <!--  -->
+        <!-- drinkdetails -->
         <div id="drink-details" class="w-50 mx-auto"></div>
         <!--Cocktail search result -->
         <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col"></div>
         </div>
 
+        <!-- error -->
+        <div id="error"></div>
+
+        <!-- Spinner -->
+        <div class="text-center">
+            <div id="spinner" class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
         <!-- script -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
         <script src="./cocktail.js"></script>
