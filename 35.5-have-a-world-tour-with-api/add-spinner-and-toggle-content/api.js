@@ -1,5 +1,5 @@
 // 35_5-2 Common API Data access related issues
-
+//35_5-3 Add Spinner And Toggle Content While Loading Data
 const loadSingleUser = () => {
     fetch('https://randomuser.me/api/')
         .then((res) => res.json())
@@ -9,6 +9,23 @@ loadSingleUser();
 
 const displaySingleUser = (user) => {
     console.log(user);
+};
+
+// meal db
+const toggleSpinner = (displayStyle) => {
+    document.getElementById('spinner').style.display = displayStyle;
+};
+const toggleSearchResult = (displayStyle) => {
+    document.getElementById('meals').style.display = displayStyle;
+};
+const searchMeal = () => {
+    const searchText = document.getElementById('search-field').value;
+
+    // display spinner
+    toggleSpinner('block');
+    toggleSearchResult('none');
+    loadMeals(searchText);
+    document.getElementById('search-field').value = '';
 };
 
 const loadMeals = (searchText) => {
