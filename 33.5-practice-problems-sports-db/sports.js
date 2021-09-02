@@ -43,11 +43,11 @@ const displaySearchResult = (teams) => {
 //
 const loadTeamDetail = (teamId) => {
     console.log(teamId);
-    const url = `https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${teamId}`;
-
-    fetch(url)
+    //const url = `https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${teamId}`;
+    const url2 = `https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4328`;
+    fetch(url2)
         .then((res) => res.json())
-        .then((data) => displayTeamDetails(data.teams[0]));
+        .then((data) => displayTeamDetails(data));
 };
 
 const displayTeamDetails = (team) => {
