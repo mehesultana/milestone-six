@@ -16,6 +16,12 @@
                 <input id="search-field" type="text" class="form-control" placeholder="Search for a Cocktail....." aria-label="Recipient's username" />
                 <button onclick="searchDrink()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
             </div>
+            <!-- Spinner -->
+            <div class="text-center">
+                <div id="loadingSpinner" class="spinner-border d-none text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
 
             <!-- drink details -->
             <div id="drink-details" class="w-50 mx-auto"></div>
@@ -26,13 +32,6 @@
 
             <!-- error -->
             <div id="error" class="text-center text-danger"></div>
-
-            <!-- Spinner -->
-            <div class="text-center">
-                <div id="spinner" class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
         </section>
         <!-- script -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
